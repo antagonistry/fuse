@@ -28,6 +28,7 @@ int main(int argc, char *argv[]) {
 	if (!file) return 1;
 
 	while (fgets(line, LINE_LENGTH, file) != NULL) {
+		++lines;
 		printf("%s", line);
 
 		if (line[strlen(line) - 1] != '\n') printf("\n");
