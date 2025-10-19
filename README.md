@@ -14,6 +14,7 @@ executable version of Fuse. Then chat whatever you want.
 
 Fuse has a few commands that can be run through the chat, those being
 `@quit`, `@q`, `@exit`, `@e`, `@help` and `@h`.
+It also has 2 options to use in the app, which is `-u` and `--username`.
 If you make a typo, you cannot change the dialogue you just entered, but
 you can modify the file yourself!
 
@@ -27,9 +28,10 @@ can also fork this repository for your local community!
 
 ## Note
 
-The maximum length of a chat is 512 lines, including the header lines.
-To make it accessible for the previous chat, you should backup it for
-some situation like someone spamming.
+Basically, **don't trust other, because everyone can use any username as their
+username.** The maximum length of a chat is 512 lines, **including the header
+lines.** To make it accessible for the previous chat, you should backup it for
+some situation like someone **spamming**.
 
 If you somehow can't compile the executable, there's just a person that
 accidently delete or modify, or they just want to delete or modify the
