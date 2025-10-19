@@ -11,11 +11,14 @@ int main(int argc, char *argv[]) {
 	int i = 0;
 
 	for (i = 1; i < argc; ++i) {
-		if (strcmp(argv[i], "-u") != 0 && strcmp(argv[i], "--username") != 0) exit(1);
-		if (argc < ++i) exit(1);
-		if (strlen(argv[i]) > USERNAME_LENGTH) exit(1);
+		if (strcmp(argv[i], "-u") == 0 || strcmp(argv[i], "--username") == 0) {
+			if (i + 1 > argc) exit(1);
 
-		strcpy(username, argv[++i]);
+			strncpy(username, argv[i + 1], USERNAME_LENGTH);
+			++i;
+			continue;
+		}
+		exit(1);
 	}
 
 	FILE *file = fopen("log", "r");
