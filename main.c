@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
 
 		if (*ptr == '\0' || *line == '\0') continue;
 
-		if (lines > 1 && lines < LINES_LENGTH) {
+		if (lines >= 1 && lines < LINES_LENGTH) {
 			file = fopen("log", "a");
 			fprintf(file, "[%s] %s", username, line);
 			fclose(file);
