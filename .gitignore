@@ -1,0 +1,11 @@
+
+*.o
+*.exe
+*.out
+*.js
+*.r
+*.rs
+*.py
+*.v
+*.html
+*.ftn
