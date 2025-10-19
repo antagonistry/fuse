@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
 
 		if (lines >= 1 && lines < LINES_LENGTH) {
 			file = fopen("log", "a");
-			fprintf(file, "[%s] %s", username, line);
+			fprintf(file, "[%s] %s\n", username, line);
 			fclose(file);
 			++lines;
 			continue;
@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
 		file = fopen("log", "w");
 		fprintf(file, "=============   Welcome to Fuse System!   =============\n");
 		fprintf(file, "You can send anything to the chat, no need to register!\n\n");
-		fprintf(file, "[%s] %s", username, line);
+		fprintf(file, "[%s] %s\n", username, line);
 		fclose(file);
 		++lines;
 	}
